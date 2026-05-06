@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Wallet</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.9.0/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Create Wallet</a>
+        <a href="buy.html">Buy Ticket</a>
+        <a href="transfer.html">Return Ticket</a>
+    </nav>
+
+    <div class="container">
+        <h1>Create a Wallet</h1>
+
+        <div class="card">
+            <input type="password" id="password" placeholder="Enter a password for your wallet">
+            <button onclick="createWallet()">Create Wallet</button>
+        </div>
+
+        <div class="card" id="walletDetails" style="display:none">
+            <label>Wallet Address:</label>
+            <textarea id="walletAddress" rows="2" readonly></textarea>
+
+            <label>Private Key:</label>
+            <textarea id="privateKey" rows="2" readonly></textarea>
+
+            <label>Keystore File:</label>
+            <textarea id="keystore" rows="6" readonly></textarea>
+
+            <button onclick="downloadKeystore()">Download Keystore</button>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
