@@ -50,4 +50,3 @@ function setStatus(message, type) {
     el.textContent = message;
     el.className = type;
 }
-`

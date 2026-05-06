@@ -82,3 +82,10 @@ async function getAttendeeBalance() {
         console.error("Failed to fetch balance:", err);
     }
 }
+
+function setStatus(message, type) {
+    const el = document.getElementById("status");
+    if (!el) return;
+    el.textContent = message;
+    el.className = type;
+}

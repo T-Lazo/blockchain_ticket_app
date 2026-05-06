@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Doorman</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.9.0/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Create Wallet</a>
+        <a href="buy.html">Buy Ticket</a>
+        <a href="transfer.html">Return Ticket</a>
+        <a href="doorman.html">Ticket Doorman</a>
+    </nav>
+
+    <div class="container">
+        <h1>Ticket Doorman</h1>
+
+        <!-- Doorman Role: verify a single attendee at the door -->
+        <div class="card">
+            <h2>Doorman — Verify Ticket</h2>
+            <p>Enter an attendee's wallet address to check if they hold a valid ticket.</p>
+            <input type="text" id="doormanAddress" placeholder="Enter attendee wallet address">
+            <button onclick="checkDoormanBalance()">Verify Ticket</button>
+            <p id="doormanResult"></p>
+        </div>
+
+        <!-- Attendee Role: check your own balance -->
+        <div class="card">
+            <h2>Attendee — Check Your Balance</h2>
+            <p>Enter your wallet address to check your ticket balance.</p>
+            <input type="text" id="attendeeAddress" placeholder="Enter your wallet address">
+            <button onclick="checkAttendeeBalance()">Check Balance</button>
+            <p id="attendeeResult"></p>
+        </div>
+
+        <!-- Venue Role: monitor total supply and sales -->
+        <div class="card">
+            <h2>Venue — Sales Overview</h2>
+            <p>View total ticket supply and SETH collected from sales.</p>
+            <button onclick="checkVenueStats()">Load Venue Stats</button>
+            <p id="totalSupply"></p>
+            <p id="ticketsSold"></p>
+            <p id="sethCollected"></p>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script src="../js/contract.js"></script>
+    <script src="../js/balance.js"></script>
+</body>
+
+</html>
