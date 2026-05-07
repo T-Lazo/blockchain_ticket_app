@@ -75,6 +75,28 @@ nav a.nav-logo {
     letter-spacing: -0.4px;
     padding-right: 20px;
     margin-right: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #071F1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav-logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 nav a.nav-active {
