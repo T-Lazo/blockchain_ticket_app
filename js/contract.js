@@ -382,4 +382,4 @@ const ABI = [
 
 // Read-only web3 instance using public Sepolia RPC
 // Used for balance checks that don't need MetaMask
-const web3ReadOnly = new Web3("https://rpc2.sepolia.org");
+const web3ReadOnly = new Web3("https://ethereum-sepolia-rpc.publicnode.com");

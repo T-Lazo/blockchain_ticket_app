@@ -86,7 +86,7 @@ async function checkVenueStats() {
         const seth = web3ReadOnly.utils.fromWei(sethBalance, "ether");
 
         document.getElementById("totalSupply").textContent =
-            "Total tickets: " + totalTokens;
+            "Total ticket supply: " + totalTokens;
         document.getElementById("ticketsSold").textContent =
             "Tickets sold: " + sold;
         document.getElementById("sethCollected").textContent =
