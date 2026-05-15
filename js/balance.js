@@ -1,10 +1,8 @@
-// Handles balance checking for all three actor roles:
-// - Attendee: checks their own token balance
-// - Doorman: checks any wallet address for a valid ticket
-// - Venue: checks total ticket supply and contract SETH balance
-//
-// Uses the read-only web3 instance from contract.js so these
-// checks don't require MetaMask — anyone can verify balances.
+// balance checking - 3 separate functions instead of one big one
+// doorman doesnt need metamask connected (just checks any address),
+// attendee does need metamask, venue needs contract address specifically
+// tried combining them at first and it got messy fast, easier to just
+// keep them split so each one is doing exactly one thing
 
 async function checkAttendeeBalance() {
     const address = document.getElementById("attendeeAddress").value.trim();

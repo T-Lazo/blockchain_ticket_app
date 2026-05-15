@@ -1,6 +1,6 @@
-// Handles returning a ticket back to the venue/owner.
-// Calls the returnTicket() function on the smart contract
-// which transfers 1 TKT token from the attendee back to
+// handles returning a ticket back to the venue/owner.
+// calls the returnticket() function on the smart contract
+// which transfers 1 tkt token from the attendee back to
 // the contract owner (venue).
 
 let userAccount = null;

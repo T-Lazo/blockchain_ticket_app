@@ -1,6 +1,8 @@
-// Shared contract configuration imported by all pages.
-// Contains the ABI and deployed contract address for the
-// TicketToken ERC-20 smart contract on Sepolia testnet.
+// contract.js - shared config for contract abi + address
+// keeping this in one place so if i redeploy i only have to change it here
+// rather than hunting through every js file. learned this the hard way
+// when i changed the address mid-project and balance.js was still pointing
+// to the old one for about an hour before i noticed
 
 const CONTRACT_ADDRESS = "0xFb98647EFe39e27A24Bd14067Af6dE182De35C96";
 

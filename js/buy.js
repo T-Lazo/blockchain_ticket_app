@@ -37,6 +37,11 @@ async function connectWallet() {
     }
 }
 
+
+// handles the full buy flow - pending, confirmed, rejected etc
+// sepolia takes like 12 seconds per block
+// also separating metamask rejection from a contract revert because
+// spent way too long showing raw errors to the user before fixing this
 async function buyTicket() {
     if (!userAccount) {
         setStatus("Please connect MetaMask before buying a ticket.", "error");
